@@ -11,9 +11,9 @@ The job market in the post-COVID era is becoming more volatile and rapidly chang
 The hiring window is usually in weekly resolution, but the Current Employment Statistics (CES) data is updated monthly. So this dashboard will focus on the month-over-month change in federal statistics metrics, as well as the week-over-week change in LinkedIn data. In particular:
 
 CES:
-- Employees, by selected industry 
-- Average weekly hours and overtime,  by selected industry 
-- Average weekly and hourly earnings,  by selected industry 
+- Employees, by selected industry, by selected State 
+- Average weekly hours and overtime,  by selected industry, by selected State 
+- Average weekly and hourly earnings,  by selected industry, by selected State 
 
 LinkedIn Job Post
 - Number of Results When searching job posted past week, by position
