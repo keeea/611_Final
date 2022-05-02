@@ -1,0 +1,10 @@
+from linkedin_api import Linkedin
+
+# Authenticate using any Linkedin account credentials
+api = Linkedin('lanxiao1120@yeah.net', 'linkedin611')
+
+# GET a profile
+profile = api.get_profile('billy-g')
+
+print(profile)
+
