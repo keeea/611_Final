@@ -1,4 +1,4 @@
-# Proposal: Data-Oriented Service Jobs
+# Proposal: Dashboard of Data-Oriented Service Jobs
 
 
 **By**:
