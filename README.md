@@ -1,4 +1,4 @@
-# Proposal: Knowledge-Oriented Service Jobs
+# Proposal: Data-Oriented Service Jobs
 
 
 **By**:
