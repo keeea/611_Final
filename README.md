@@ -6,7 +6,7 @@
 
 ## Goal
 
-* Help users understand employment market in various industries, jobs, and states.
+* Help users understand employment market in various industries, jobs positions, and states, therefore better relocate themselves.
 
 ## Stakeholders
 
