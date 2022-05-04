@@ -4,6 +4,21 @@
 **By**:
 * Lan Xiao, lanxiao@design.upenn.edu
 
+## Goal
+
+* Help users understand employment market in various industries, jobs, and states.
+
+## Stakeholders
+
+* Entry-level employees seeking or relocating in common data-oriented service positions.
+* Recent graduates who are unfamiliar with the employment market.
+
+## Decisions
+
+* Which industry to join
+* Which position to devote
+* Where to relocate and start career
+
 ## Abstract
 
 The job market in the post-COVID era is becoming more volatile and rapidly changing than ever before. This web dashboard will help graduates get quick information on the overall job market and common knowledge-oriented service positions to assist in better locating themselves to the industry, position and location.
@@ -21,21 +36,6 @@ LinkedIn Job Post
 - Compostion of job titles, by position, by selected State
 - Compostion of industries, by position, by selected State
 - Compostion of remote availability, by position, by selected State
-
-## Goal
-
-* Help users understand employment market in various industries, jobs, and states.
-
-## Stakeholders
-
-* Employees seeking or relocating in common knowledge-oriented service positions.
-* Especially target at graduates who are unfamiliar with the employment market.
-
-## Decisions
-
-* Which industry to join
-* Which position to devote
-* Which state to start career
 
 ## Data sources
 
