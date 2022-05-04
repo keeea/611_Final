@@ -5,6 +5,43 @@ body {
   font-weight: 400;
 }
 
+.linkToSecond {
+  position: sticky;
+  box-sizing: content-box;
+  width: 13%;
+  height: 3%;
+  left: 3%;
+  top: 2%;
+  border-radius: 2rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  background-image: linear-gradient(#D9896C, #F29727);
+}
+
+.linkword {
+  text-decoration: none;
+  color: #ffffff ;
+  font-weight: bold;
+}
+
+.intro{
+  position: sticky;
+  box-sizing: border-box;
+  width: 30%;
+  top: 8%;
+  margin-left: 3rem;
+  padding: 1rem;
+  text-align: justify;
+  line-height:120%;
+  border-radius: 0.5rem;
+  /* border: 1px solid #BF4A0D; */
+  color: #380000;
+  opacity: 0.80;
+  background-image: linear-gradient(rgb(242, 209, 109), rgb(242,214,179));
+}
+
 .map {
     position: absolute;
     left: 0px;
@@ -20,9 +57,9 @@ body {
 
 .filter-summary {
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 0.8 rem;
 }
 
 .employment > ul {
@@ -78,11 +115,7 @@ body {
   border-radius: 0.75rem;
 }
 
-/*
-  Emojis:
-  - 🗳️ 01F5F3
-  - 📅 01F4C5
-*/
+
 .employment .party::before {
   content: "\01F5F3";
   padding-right: 0.5rem;
@@ -121,36 +154,49 @@ body {
   .filters,
   .employment {
     box-sizing: border-box;
-    width: 40%;
-    margin-left: auto;
+    width: 30%;
     pointer-events: visible;
     position: relative;
   }
 
   .filters {
     position: sticky;
-    top: 1rem;
+    top: 19%;
+    left: 3%;
     border-radius: 0.5rem;
-    border: 1px solid gray;
     margin-top: 1rem;
     z-index: 1;
-    background-color: #eee;
+    opacity: 0.90;
     box-shadow: 3px 3px 5px silver;
+    background-image: linear-gradient(#F29727, #F7DBB3);
+    color: #ffffff ;
+  }
+
+  .filter-space {
+    color: #BF4A0D;
   }
 
   .employment > ul {
     pointer-events: all;
-    padding-top: 0;
+    padding-top: 1rem;
   }
 
   .employment li {
-    background-color: white;
     margin: 1rem 0;
+    left: 3%;
     padding: 1rem;
     border-radius: 0.5rem;
-    border: 1px solid gray;
+    /* border: 1px solid #BF4A0D; */
+    color: #380000;
+    opacity: 0.80;
+    background-image: linear-gradient(#F7DBB3, #ffffff);
   }
 }
+
+  .employment .remoteWork::before {
+  content: "\1F3E0";
+  padding-right: 0.5rem;
+  }
 
 @media screen and (min-width: 1200px) {
   .employment > ul {

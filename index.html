@@ -21,25 +21,30 @@
 </head>
 <body>
   <div class="map" id="map"></div>
+  <nav class="linkToSecond">
+      <a href="second.html" class="linkword">Employment Statistic</a>
+  </nav>
+  <p class="intro">This dashboard was developed to help entry-level employees 
+    get quick job information of common data-oriented positions and to better locate self to the industry, position
+     and location.
+  </p>
   <div class="filters">
-    <nav>
-      <a href="second.html">Employment Statistic</a>
-    </nav>
+    
     <div class="filter-field">
       <label for="state-filter">State</label>
-      <select id="state-filter">
+      <select id="state-filter" class="filter-space">
         <option value="">(All States)</option>
       </select>
     </div>
 
     <div class="filter-field">
       <label for="recency-filter">Recency</label>
-      <input id="recency-filter" type="date">
+      <input id="recency-filter" type="date" class="filter-space">
     </div>
 
     <div class="filter-field">
       <label for="position-filter">Position</label>
-      <select id="position-filter">
+      <select id="position-filter" class="filter-space">
         <option value="">(All Position)</option>
       </select>
     </div>

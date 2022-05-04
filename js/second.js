@@ -21,14 +21,14 @@ baseLayer.addTo(densitymap);
 let layerGroup = L.layerGroup().addTo(densitymap);
 
 function getColor(d) {
-return d > 3 ? '#800026' :
-        d > 1 ? '#BD0026' :
-        d > 0.3  ? '#E31A1C' :
-        d > 0.1  ? '#FC4E2A' :
-        d > 0   ? '#FD8D3C' :
-        d > 0.1  ? '#FEB24C' :
-        d > -1  ? '#FED976' :
-                    '#FFEDA0' ;
+return d > 3 ? "#760000" :
+        d > 1 ? "#a62300" :
+        d > 0.3  ? "#f2761a" :
+        d > 0.1  ? "#F29727" :
+        d > 0   ? "#F2CA52" :
+        d > 0.1  ? "#F7DBB3" :
+        d > -1  ? "#c5eddf" :
+                    "#8abccf";
 }
 
 function getStyle(feature) {
@@ -74,14 +74,14 @@ overviewLegend.onAdd = function (map) {
     var container = L.DomUtil.create('div', 'info legend');
     container.innerHTML = `
         <ol>
-        <li><span class="key-color" style="background: #FFEDA0;"></span><span class="key-label">Low</span></li>
-        <li><span class="key-color" style="background: #FED976;"></span></li>
-        <li><span class="key-color" style="background: #FEB24C;"></span></li>
-        <li><span class="key-color" style="background: #FD8D3C;"></span></li>
-        <li><span class="key-color" style="background: #FC4E2A;"></span></li>
-        <li><span class="key-color" style="background: #E31A1C;"></span></li>
-        <li><span class="key-color" style="background: #BD0026;"></span></li>
-        <li><span class="key-color" style="background: ##800026;"></span><span class="key-label">High</span></li>
+        <li><span class="key-color" style="background: #760000;"></span><span class="key-label">High</span></li>
+        <li><span class="key-color" style="background: #a62300;"></span></li>
+        <li><span class="key-color" style="background: #f2761a;"></span></li>
+        <li><span class="key-color" style="background: #F29727;"></span></li>
+        <li><span class="key-color" style="background: #F2CA52;"></span></li>
+        <li><span class="key-color" style="background: #F7DBB3;"></span></li>
+        <li><span class="key-color" style="background: #c5eddf;"></span></li>
+        <li><span class="key-color" style="background: #8abccf;"></span><span class="key-label">Low</span></li>
         </ol>
         `;
     return container;

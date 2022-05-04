@@ -23,11 +23,46 @@ h5 {
 h4 {
     grid-area: map;
   }
-#explanatoryText{
+
+.linkToIndex {
   grid-area: text;
   margin: 1rem;
   margin-top: 5rem;
+  width: 40%;
+  height: 3%;
+  border-radius: 2rem;
+  padding: 0.5rem 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  background-image: linear-gradient(#D9896C, #F29727);
 }
+
+.linkword {
+  text-decoration: none;
+  color: #ffffff ;
+  font-weight: bold;
+}
+
+#explanatoryText{
+  grid-area: text;
+  height: 45%;
+  padding: 1rem;
+  padding-top: 0.2rem;
+  margin: 1rem;
+  margin-top: 8rem;
+  border-radius: 0.5rem;
+  /* border: 1px solid #BF4A0D; */
+  color: #380000;
+  opacity: 0.80;
+  text-align: justify;
+  line-height:120%;
+  background-image: linear-gradient(rgb(242, 209, 109), rgb(242,214,179));
+}
+
+
 #densitymapWrapper {
   grid-area: map;
   margin: 1rem;
@@ -38,8 +73,35 @@ h4 {
 }
 .filter-field {
     grid-area: text;
-    margin-top: 2rem;
+    height: 4rem;
+    margin: 1rem;
+    padding: 1rem;
+    padding-top: 3rem;
+    margin-top: 28rem;
+    border-radius: 0.5rem;
+    opacity: 0.90;
+    background-image: linear-gradient(#F29727, #F7DBB3);
+    color: #ffffff ;
   }
+.filter-field label {
+  width: 6rem;
+  padding: 0.25rem 0;
+  font-weight: 600;
+}
+.filter-space {
+  color: #BF4A0D;
+}
+.filter-field select {
+  width: 100%;
+  height: 2rem;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  background-color: #fff8f0;
+  padding-left: 0.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
 .legend {
 padding: 6px 8px;
 background: white;

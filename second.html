@@ -21,35 +21,35 @@
 <body>
   <h2>Employment Statistics from U.S. BUREAU OF LABOR STATISTICS</h2>
 
+  <nav class="linkToIndex">
+    <a href="index.html" class="linkword">Job Post on LinkedIn</a>
+  </nav>
+
   <!-- Explatory text goes in its own div -->
   <div id="explanatoryText">
-    <nav>
-      <a href="index.html">Job Post on LinkedIn</a>
-    </nav>
-
-    <p>This dashboard visualizes the Employees change on nonfarm payrolls by state and selected industry sector.
-    <p>----------------------------------------------------------------------------------------------------------------
-    <p>----------------------------------------------------------------------------------------------------------------
+    <p>This dashboard maps the nonfarm Employees Change by state and selected industry sector.<br>
+    Monthly updated data come from Current Employment Statistics (CES).
     </p>
+    <center><img src="giphy.gif" style="height:170px;"></center>
     <style>
       table,table tr th, table tr td { border:1px solid #247BA0; }
       table { width: 600px; min-height: 75px; line-height: 25px; text-align: center; border-collapse: collapse;}
     </style>
+  </div>
 
-    <div class="filter-field">
-      <label for="state-filter">Industry</label>
-      <select id="state-filter">
-        <option value="Total">Total</option>
-        <option value="Construction">Construction</option>
-        <option value="Manufacturing">Manufacturing</option>
-        <option value="Trade_transportation_utilities">Trade, transportation, and utilities</option>
-        <option value="FinancialActivities">Financial activities</option>
-        <option value="ProfessionalAndBusinessServices">Professional and business services</option>
-        <option value="EducationAndHealthServices">Education and health services	</option>
-        <option value="LeisureAndHospitality">Leisure and hospitality</option>
-        <option value="Government">Government</option>
-      </select>
-    </div>
+  <div class="filter-field">
+    <label for="state-filter">Industry</label>
+    <select id="state-filter" class="filter-space">
+      <option value="Total">Total</option>
+      <option value="Construction">Construction</option>
+      <option value="Manufacturing">Manufacturing</option>
+      <option value="Trade_transportation_utilities">Trade, transportation, and utilities</option>
+      <option value="FinancialActivities">Financial activities</option>
+      <option value="ProfessionalAndBusinessServices">Professional and business services</option>
+      <option value="EducationAndHealthServices">Education and health services	</option>
+      <option value="LeisureAndHospitality">Leisure and hospitality</option>
+      <option value="Government">Government</option>
+    </select>
   </div>
 
   <div id="densitymapWrapper">
