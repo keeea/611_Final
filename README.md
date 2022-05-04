@@ -10,7 +10,7 @@
 
 ## Stakeholders
 
-* Entry-level employees seeking or relocating in common data-oriented service positions.
+* Entry-level employees seeking common data-oriented service positions.
 * Recent graduates who are unfamiliar with the employment market.
 
 ## Decisions
