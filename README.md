@@ -1,8 +1,23 @@
-# Proposal: Knowledge-Oriented Service Jobs
+# Proposal: Dashboard of Data-Oriented Service Jobs
 
 
 **By**:
 * Lan Xiao, lanxiao@design.upenn.edu
+
+## Goal
+
+* Help users understand employment market in various industries, jobs positions, and states, therefore better relocate themselves.
+
+## Stakeholders
+
+* Entry-level employees seeking common data-oriented service positions.
+* Recent graduates who are unfamiliar with the employment market.
+
+## Decisions
+
+* Which industry to join
+* Which position to devote
+* Where to relocate and start career
 
 ## Abstract
 
@@ -21,21 +36,6 @@ LinkedIn Job Post
 - Compostion of job titles, by position, by selected State
 - Compostion of industries, by position, by selected State
 - Compostion of remote availability, by position, by selected State
-
-## Goal
-
-* Help users understand employment market in various industries, jobs, and states.
-
-## Stakeholders
-
-* Employees seeking or relocating in common knowledge-oriented service positions.
-* Especially target at graduates who are unfamiliar with the employment market.
-
-## Decisions
-
-* Which industry to join
-* Which position to devote
-* Which state to start career
 
 ## Data sources
 
