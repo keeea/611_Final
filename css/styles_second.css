@@ -1,0 +1,67 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows:7vh 1fr 5vh;
+  grid-template-areas:
+    "header header"
+    "map text"
+    "footer footer";
+  row-gap: 1rem;
+  margin: 2rem;
+}
+
+h2 {
+  grid-area: header;
+  margin: 0.5rem;
+}
+h5 {
+  grid-area: footer;
+  margin: 0.5rem;
+}
+h4 {
+    grid-area: map;
+  }
+#explanatoryText{
+  grid-area: text;
+  margin: 1rem;
+  margin-top: 5rem;
+}
+#densitymapWrapper {
+  grid-area: map;
+  margin: 1rem;
+    }
+#densitymap {
+  grid-area: map;
+  height: 500px;
+}
+.filter-field {
+    grid-area: text;
+    margin-top: 2rem;
+  }
+.legend {
+padding: 6px 8px;
+background: white;
+background: rgba(255,255,255,0.8);
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+border: 1px solid black;
+border-radius: 5px;
+}
+.legend ol {
+list-style: none;
+padding: 0;
+display: flex;
+}
+.legend li {
+display: flex;
+gap: 0.25em;
+}
+.legend li:first-child {
+flex-direction: row-reverse;
+}
+.key-color {
+display: block;
+width: 1rem;
+height: 1rem;
+}
