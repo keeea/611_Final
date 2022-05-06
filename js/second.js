@@ -1,10 +1,10 @@
 const stateSelect = document.querySelector('#state-filter');
 let industry = 'Total';
 
-let densitymapdata = { features: [] };
+let employmentMapdata = { features: [] };
 var initialCenter = [39.3, -97.8];  // <-- Latitude, Longitude
 var initialZoom = 4;
-var densitymap = L.map('densitymap', {
+var employmentMap = L.map('employmentMap', {
     zoomSnap: 0,
     zoomDelta: 0.25
 }).setView(initialCenter, initialZoom);
@@ -16,9 +16,9 @@ var baseLayer = new L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smoo
     maxZoom: 20,
     ext: 'png'
 });
-baseLayer.addTo(densitymap);
+baseLayer.addTo(employmentMap);
 
-let layerGroup = L.layerGroup().addTo(densitymap);
+let layerGroup = L.layerGroup().addTo(employmentMap);
 
 function getColor(d) {
 return d > 3 ? "#760000" :
@@ -30,44 +30,6 @@ return d > 3 ? "#760000" :
         d > -1  ? "#c5eddf" :
                     "#8abccf";
 }
-
-function getStyle(feature) {
-    var scaledValue = feature.properties[industry];
-    var featureColor = getColor(scaledValue);
-
-    return {
-    color: featureColor,
-    weight: 2,
-    opacity: 1,
-    dashArray: '3',
-    fillOpacity: 0.7
-    };
-}
-
-function getTooltip(layer) {
-    var density = layer.feature.properties[industry];
-    return density;
-}
-
-function loadPhamData() {
-    fetch('BLS_data/employment_change.json')
-      .then(resp => resp.json())
-      .then(d => {
-        densitymapdata = d.features;
-        console.log(densitymapdata);
-        let dataLayer = L.geoJSON(densitymapdata, {
-            style: getStyle
-        });
-        dataLayer.bindTooltip(getTooltip)
-        dataLayer.addTo(layerGroup);
-      });
-  }
-
-
-loadPhamData();
-//////
-
-
 
 var overviewLegend = L.control({position: 'bottomright'});
 overviewLegend.onAdd = function (map) {
@@ -87,6 +49,40 @@ overviewLegend.onAdd = function (map) {
     return container;
 };
 
+
+function getStyle(feature) {
+    var scaledValue = feature.properties[industry];
+    var featureColor = getColor(scaledValue);
+
+    return {
+    color: featureColor,
+    weight: 2,
+    opacity: 1,
+    dashArray: '3',
+    fillOpacity: 0.7
+    };
+}
+
+function getTooltip(layer) {
+    let employmentChange = layer.feature.properties[industry];
+    return employmentChange;
+}
+
+function Load_Initialize() {
+    fetch('data/BLS_data/employment_change.json')
+      .then(resp => resp.json())
+      .then(d => {
+        employmentMapdata = d.features;
+        console.log(employmentMapdata);
+        L.geoJSON(employmentMapdata, {
+            style: getStyle
+        }).addTo(layerGroup);
+      });
+  }
+
+
+Load_Initialize();
+
 let handleSelectChange = () => {
     let industry = stateSelect.value
 
@@ -104,17 +100,15 @@ let handleSelectChange = () => {
     }
     
     function getTooltip2(layer) {
-        var density = layer.feature.properties[industry];
-        return density;
+        var employmentChange = layer.feature.properties[industry];
+        return employmentChange;
     }
 
     layerGroup.clearLayers();
-    let dataLayer = L.geoJSON(densitymapdata, {
+    L.geoJSON(employmentMapdata, {
         style: getStyle2
-    });
-    dataLayer.bindTooltip(getTooltip2)
-    dataLayer.addTo(layerGroup);
+    }).bindTooltip(getTooltip2).addTo(layerGroup);
   };
 
-overviewLegend.addTo(densitymap);
+overviewLegend.addTo(employmentMap);
 stateSelect.addEventListener('change', handleSelectChange);

@@ -11,7 +11,7 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var leafletIcon= L.icon({
-  iconUrl:'job2.png',
+  iconUrl:'img/job2.png',
   iconSize:[40, 40]
 })
 
@@ -153,7 +153,7 @@ const filterEmploymentData = function(data) {
 
 
 const showMap = function(){
-  fetch('data.csv')
+  fetch('data/data.csv')
     .then(resp => resp.text())
     .then(text =>{
        const {data} = Papa.parse(text,{ header:true});
