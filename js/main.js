@@ -33,11 +33,11 @@ const mapboxApiToken = 'pk.eyJ1IjoibWp1bWJlLXRlc3QiLCJhIjoiY2wxMTRseWx0MTdibzNrc
 const showEmploymentMarker = function (marker) {
   employmentMarkerGroup.clearLayers();
   employmentMarkerGroup.addLayer(marker);
-  const latlng = marker.getBounds().southWest;
+  const latlng = marker.getBounds()._southWest;
   map.panTo(latlng);
 };
 
-const myStyle = {
+let myStyle = {
   "color": "#ff7800",
   "weight": 5,
   "opacity": 0.65
@@ -57,9 +57,7 @@ const handleEmploymentListItemClick = function () {
       .then(resp => resp.json())
       .then(geocoderData => {
         const feature = geocoderData.features[0];
-        const marker = L.geoJSON({ pointToLayer: function(feature, LatLng)
-          { return L.marker(LatLng, { icon: leafletIcon }); }
-        });
+        const marker = L.geoJSON(feature);
         showEmploymentMarker(marker);
       });
   }
@@ -68,7 +66,7 @@ const handleEmploymentListItemClick = function () {
 
 
 function contains(a, obj) {
-  for (var i = 0; i < a.length; i++) {
+  for (let i = 0; i < a.length; i++) {
     if (a[i] === obj) {
       return true;
     }
@@ -164,19 +162,17 @@ const initStateOptions = function () {
   }
 };
 
-
+let employmentData = [];
 const showMap = function () {
-  fetch('data/data.json')
+  fetch('https://raw.githubusercontent.com/keeea/Knowledge-Oriented-Service-Jobs-Dashboard/main/data/data.json')
     .then(resp => resp.json())
     .then(data => {
-      const employmentData = data;
+      employmentData = data;
       initEmploymentItems(employmentData);
       initPositionOptions();
       initStateOptions();
     });
 };
-
-let employmentData = {};
 
 const handleStateFilterChange = function () {
   const filteredEmployment = filterEmploymentData(employmentData);

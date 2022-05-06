@@ -10,7 +10,7 @@ for more information: https://stackoverflow.com/a/35385518/123776
  * @param {String} HTML representing a single element
  * @return {Element}
  */
- function htmlToElement(html) {
+function htmlToElement(html) {
   const template = document.createElement('template');
   const trimmedHtml = html.trim(); // Never return a text node of whitespace as the result
   template.innerHTML = trimmedHtml;

@@ -70,7 +70,7 @@ function getTooltip(layer) {
 }
 
 function Load_Initialize() {
-  fetch('data/BLS_data/employment_change.json')
+  fetch('https://raw.githubusercontent.com/keeea/Knowledge-Oriented-Service-Jobs-Dashboard/main/data/BLS_data/employment_change.json')
     .then(resp => resp.json())
     .then(d => {
       employmentMapdata = d.features;
