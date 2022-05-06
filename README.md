@@ -1,6 +1,7 @@
 # Proposal: Dashboard of Data-Oriented Service Jobs
 
-## Web Dashboard: https://keeea.github.io/Knowledge-Oriented-Service-Jobs-Dashboard/second.html
+## Web Dashboard: 
+https://keeea.github.io/Knowledge-Oriented-Service-Jobs-Dashboard/second.html
 
 **By**:
 * Lan Xiao, lanxiao@design.upenn.edu
