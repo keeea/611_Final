@@ -10,7 +10,7 @@ var employmentMap = L.map('employmentMap', {
   zoomDelta: 0.25
 }).setView(initialCenter, initialZoom);
 
-const baseLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png?api_key=5e84f199-e705-477b-a858-a70bcc6f1a75', {
+const baseLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=5e84f199-e705-477b-a858-a70bcc6f1a75', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   subdomains: 'abcd',
   minZoom: 0,

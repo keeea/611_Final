@@ -46,12 +46,10 @@ let myStyle = {
 
 const handleEmploymentListItemClick = function () {
   const employmentListItem = this;
-  const [key] = employmentListItem.dataset.key;
-  const [addressDetail] = employmentListItem.dataset.addressDetail;
-  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${addressDetail}.json?access_token=${mapboxApiToken}`;
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${employmentListItem.dataset.addressDetail}.json?access_token=${mapboxApiToken}`;
 
-  if (key in employmentMarkers) {
-    const marker = employmentMarkers[key];
+  if (employmentListItem.dataset.key in employmentMarkers) {
+    const marker = employmentMarkers[employmentListItem.dataset.key];
     showEmploymentMarker(marker);
   } else {
     fetch(url)
