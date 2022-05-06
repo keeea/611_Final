@@ -14,7 +14,6 @@ const baseLayer = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   minZoom: 0,
   maxZoom: 20,
-  ext: 'png'
 });
 baseLayer.addTo(employmentMap);
 
