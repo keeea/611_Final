@@ -1,36 +1,23 @@
 {
   "devDependencies": {
-    "eslint": "^8.14.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.5.0"
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4"
   },
   "eslintConfig": {
-    "extends": [
-      "eslint:all",
-      "plugin:react/all",
-      "airbnb",
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "plugins": [
-      "react"
-    ],
     "extends": "airbnb",
     "globals": {
       "document": "readonly",
       "fetch": "readonly",
       "navigator": "readonly",
       "window": "readonly",
+
       "$": "readonly",
       "_": "readonly",
       "ApexCharts": "readonly",
       "Chart": "readonly",
       "L": "readonly",
       "mapboxgl": "readonly",
+
       "htmlToElement": "readonly",
       "htmlToElements": "readonly"
     },
@@ -66,13 +53,5 @@
         }
       ]
     }
-  },
-  "dependencies": {
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-markdown": "^2.2.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-peer": "^0.2.6"
   }
 }
