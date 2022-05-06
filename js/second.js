@@ -12,7 +12,6 @@ var employmentMap = L.map('employmentMap', {
 
 const baseLayer = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  subdomains: 'abcd',
   minZoom: 0,
   maxZoom: 20,
   ext: 'png'
