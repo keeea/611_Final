@@ -1,0 +1,78 @@
+{
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:all",
+      "plugin:react/all",
+      "airbnb",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "extends": "airbnb",
+    "globals": {
+      "document": "readonly",
+      "fetch": "readonly",
+      "navigator": "readonly",
+      "window": "readonly",
+      "$": "readonly",
+      "_": "readonly",
+      "ApexCharts": "readonly",
+      "Chart": "readonly",
+      "L": "readonly",
+      "mapboxgl": "readonly",
+      "htmlToElement": "readonly",
+      "htmlToElements": "readonly"
+    },
+    "rules": {
+      "arrow-body-style": "off",
+      "arrow-parens": "off",
+      "camelcase": "off",
+      "comma-dangle": "off",
+      "func-names": "off",
+      "no-console": "off",
+      "no-loop-func": "off",
+      "no-plusplus": "off",
+      "no-multiple-empty-lines": "off",
+      "no-multi-spaces": "off",
+      "no-unused-vars": "off",
+      "no-var": "off",
+      "prefer-const": "off",
+      "quote-props": "off",
+      "quotes": "off",
+      "no-restricted-syntax": [
+        "error",
+        {
+          "selector": "ForInStatement",
+          "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+        },
+        {
+          "selector": "LabeledStatement",
+          "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+        },
+        {
+          "selector": "WithStatement",
+          "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-peer": "^0.2.6"
+  }
+}
