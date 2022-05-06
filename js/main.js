@@ -33,6 +33,7 @@ const mapboxApiToken = 'pk.eyJ1IjoibWp1bWJlLXRlc3QiLCJhIjoiY2wxMTRseWx0MTdibzNrc
 const showEmploymentMarker = function (marker) {
   employmentMarkerGroup.clearLayers();
   employmentMarkerGroup.addLayer(marker);
+  /* eslint no-underscore-dangle: 0 */
   const latlng = marker.getBounds()._southWest;
   map.panTo(latlng);
 };
