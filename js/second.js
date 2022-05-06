@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 const stateSelect = document.querySelector('#state-filter');
 let industry = 'Total';
 
@@ -9,7 +10,7 @@ var employmentMap = L.map('employmentMap', {
   zoomDelta: 0.25
 }).setView(initialCenter, initialZoom);
 
-var baseLayer = new L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+const baseLayer = new L.TileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   subdomains: 'abcd',
   minZoom: 0,
@@ -31,9 +32,9 @@ function getColor(d) {
                 : "#8abccf";
 }
 
-var overviewLegend = L.control({ position: 'bottomright' });
+const overviewLegend = L.control({ position: 'bottomright' });
 overviewLegend.onAdd = function (map) {
-  var container = L.DomUtil.create('div', 'info legend');
+  const container = L.DomUtil.create('div', 'info legend');
   container.innerHTML = `
         <ol>
         <li><span class="key-color" style="background: #760000;"></span><span class="key-label">High</span></li>
@@ -84,10 +85,10 @@ function Load_Initialize() {
 Load_Initialize();
 
 let handleSelectChange = () => {
-  let industry = stateSelect.value;
+  let indsty = stateSelect.value;
 
   function getStyle2(feature) {
-    var scaledValue = feature.properties[industry];
+    var scaledValue = feature.properties[indsty];
     var featureColor = getColor(scaledValue);
 
     return {
@@ -100,7 +101,7 @@ let handleSelectChange = () => {
   }
 
   function getTooltip2(layer) {
-    var employmentChange = layer.feature.properties[industry];
+    var employmentChange = layer.feature.properties[indsty];
     return employmentChange;
   }
 
